@@ -130,6 +130,25 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* ── Mobile Nav Overlay ── */
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+  pointer-events: none;
+}
+.mobile-nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 /* ── Buttons ── */
 .btn {
   display: inline-flex;
@@ -757,18 +776,49 @@
 }
 
 /* ── Responsive for Components ── */
+
+/* ─── Tablet Landscape (1024px) ─── */
 @media (max-width: 1024px) {
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .btn--lg {
+    padding: 14px 30px;
+    font-size: var(--text-sm);
+  }
 }
+
+/* ─── Tablet Portrait (768px) ─── */
 @media (max-width: 768px) {
+
+  /* Emergency Banner */
+  .emergency-banner {
+    font-size: var(--text-xs);
+    padding: 6px 0;
+  }
+  .emergency-banner__inner {
+    gap: var(--space-xs);
+    font-size: var(--text-xs);
+  }
+
+  /* Navbar — Mobile Menu */
+  .navbar__inner {
+    height: var(--nav-height);
+  }
+  .navbar__logo img {
+    height: 40px;
+  }
+  .navbar__logo-text {
+    font-size: var(--text-base);
+  }
   .navbar__links {
     position: fixed;
     top: 0;
     right: -100%;
     width: 280px;
     height: 100vh;
+    height: 100dvh;
     background: var(--navy);
     flex-direction: column;
     align-items: flex-start;
@@ -776,6 +826,8 @@
     gap: 0;
     transition: right var(--transition-slow);
     box-shadow: -10px 0 40px rgba(0,0,0,0.3);
+    overflow-y: auto;
+    z-index: 1001;
   }
   .navbar__links.open {
     right: 0;
@@ -786,17 +838,315 @@
     border-bottom: 1px solid rgba(255,255,255,0.05);
     font-size: var(--text-base);
   }
+  .navbar__link::after {
+    display: none;
+  }
   .navbar__cta {
     margin-left: 0;
-    margin-top: var(--space-md);
+    margin-top: var(--space-lg);
+    width: 100%;
+    text-align: center;
   }
   .navbar__hamburger {
     display: flex;
+    z-index: 1002;
+  }
+
+  /* Buttons */
+  .btn--lg {
+    padding: 14px 28px;
+    font-size: var(--text-sm);
+  }
+
+  /* Service Card */
+  .service-card {
+    padding: var(--space-xl);
+  }
+  .service-card__icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  /* Doctor Card */
+  .doctor-card__image {
+    height: 240px;
+  }
+  .doctor-card__body {
+    padding: var(--space-lg);
+  }
+  .doctor-card__name {
+    font-size: var(--text-lg);
+  }
+
+  /* Testimonial Card */
+  .testimonial-card {
+    padding: var(--space-xl);
+  }
+  .testimonial-card__quote {
+    font-size: 36px;
+    top: 14px;
+    right: 16px;
+  }
+
+  /* Stat Item */
+  .stat-item {
+    padding: var(--space-lg);
+  }
+
+  /* Page Hero */
+  .page-hero {
+    padding-top: calc(var(--space-3xl) + 20px);
+    padding-bottom: var(--space-2xl);
+  }
+  .page-hero__title {
+    font-size: var(--text-3xl);
+  }
+  .page-hero::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: var(--space-2xl) 0 0;
   }
   .footer__grid {
     grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    padding-bottom: var(--space-xl);
   }
-  .page-hero {
-    padding-top: calc(var(--space-3xl) + 20px);
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) 0;
+  }
+
+  /* Forms */
+  .form-input,
+  .form-select,
+  .form-textarea {
+    padding: 10px 14px;
+    font-size: var(--text-sm);
+  }
+
+  /* WhatsApp FAB */
+  .whatsapp-fab {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  /* Modal */
+  .modal {
+    padding: var(--space-xl);
+    margin: var(--space-md);
+    width: calc(100% - 2 * var(--space-md));
+    max-width: 100%;
+  }
+  .modal__title {
+    font-size: var(--text-xl);
+  }
+
+  /* Badge */
+  .badge {
+    font-size: 0.65rem;
+    padding: 3px 10px;
   }
 }
+
+/* ─── Large Phones (480px) ─── */
+@media (max-width: 480px) {
+
+  /* Emergency Banner */
+  .emergency-banner__inner {
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+  }
+
+  /* Navbar */
+  .navbar__links {
+    width: 100%;
+    padding: 80px var(--space-lg) var(--space-lg);
+  }
+  .navbar__logo img {
+    height: 36px;
+  }
+  .navbar__logo-text {
+    font-size: var(--text-sm);
+  }
+  .navbar__logo-text span {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 10px 22px;
+    font-size: var(--text-xs);
+  }
+  .btn--lg {
+    padding: 12px 24px;
+    font-size: var(--text-sm);
+    width: 100%;
+    justify-content: center;
+  }
+  .btn--sm {
+    padding: 6px 16px;
+    font-size: 0.7rem;
+  }
+
+  /* Service Card */
+  .service-card {
+    padding: var(--space-lg);
+  }
+  .service-card__icon {
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
+    margin-bottom: var(--space-md);
+  }
+  .service-card__title {
+    font-size: var(--text-lg);
+  }
+
+  /* Doctor Card */
+  .doctor-card__image {
+    height: 200px;
+  }
+  .doctor-card__body {
+    padding: var(--space-md);
+  }
+
+  /* Testimonial Card */
+  .testimonial-card {
+    padding: var(--space-lg);
+  }
+  .testimonial-card__text {
+    font-size: var(--text-sm);
+    line-height: 1.7;
+  }
+  .testimonial-card__avatar {
+    width: 40px;
+    height: 40px;
+    font-size: var(--text-base);
+  }
+
+  /* Stat Item */
+  .stat-item {
+    padding: var(--space-md);
+  }
+  .stat-item__number {
+    font-size: var(--text-3xl);
+  }
+  .stat-item__label {
+    font-size: var(--text-xs);
+  }
+
+  /* Page Hero */
+  .page-hero {
+    padding-top: calc(var(--space-2xl) + 20px);
+    padding-bottom: var(--space-xl);
+  }
+  .page-hero__title {
+    font-size: var(--text-2xl);
+  }
+  .page-hero__breadcrumb {
+    font-size: var(--text-xs);
+  }
+
+  /* Footer */
+  .footer__heading {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-md);
+  }
+  .footer__newsletter-form {
+    flex-direction: column;
+  }
+  .footer__newsletter-input {
+    width: 100%;
+  }
+  .footer__social {
+    justify-content: center;
+  }
+  .footer__social a {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  /* Modal */
+  .modal {
+    padding: var(--space-lg);
+    margin: var(--space-sm);
+    width: calc(100% - 2 * var(--space-sm));
+  }
+  .modal__icon {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+  }
+  .modal__title {
+    font-size: var(--text-lg);
+  }
+  .modal__text {
+    font-size: var(--text-sm);
+  }
+
+  /* Form Elements */
+  .form-group {
+    margin-bottom: var(--space-md);
+  }
+  .form-label {
+    font-size: var(--text-xs);
+    margin-bottom: 4px;
+  }
+}
+
+/* ─── Small Phones (360px) ─── */
+@media (max-width: 360px) {
+
+  .navbar__logo img {
+    height: 30px;
+  }
+  .navbar__logo-text {
+    font-size: var(--text-xs);
+  }
+  .navbar__logo-text span {
+    font-size: 0.55rem;
+  }
+
+  .service-card {
+    padding: var(--space-md);
+  }
+  .service-card__icon {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .doctor-card__image {
+    height: 180px;
+  }
+
+  .testimonial-card {
+    padding: var(--space-md);
+  }
+
+  .stat-item__number {
+    font-size: var(--text-2xl);
+  }
+
+  .page-hero__title {
+    font-size: var(--text-xl);
+  }
+
+  .footer__brand-text {
+    font-size: var(--text-xs);
+  }
+}
+

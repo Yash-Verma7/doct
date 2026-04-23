@@ -17,6 +17,28 @@ function initNavbar() {
   const hamburger = document.querySelector('.navbar__hamburger');
   const navLinks = document.querySelector('.navbar__links');
 
+  // Create mobile overlay
+  let overlay = document.querySelector('.mobile-nav-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'mobile-nav-overlay';
+    document.body.appendChild(overlay);
+  }
+
+  function closeMobileMenu() {
+    hamburger?.classList.remove('open');
+    navLinks?.classList.remove('open');
+    overlay?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function openMobileMenu() {
+    hamburger?.classList.add('open');
+    navLinks?.classList.add('open');
+    overlay?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
   // Scroll effect
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -28,18 +50,27 @@ function initNavbar() {
 
   // Hamburger toggle
   hamburger?.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navLinks?.classList.toggle('open');
-    document.body.style.overflow = navLinks?.classList.contains('open') ? 'hidden' : '';
+    const isOpen = navLinks?.classList.contains('open');
+    if (isOpen) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
   });
 
-  // Close on link click
-  navLinks?.querySelectorAll('.navbar__link').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger?.classList.remove('open');
-      navLinks?.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+  // Close on overlay click
+  overlay?.addEventListener('click', closeMobileMenu);
+
+  // Close on any nav link or CTA click
+  navLinks?.querySelectorAll('.navbar__link, .navbar__cta').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Close menu on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks?.classList.contains('open')) {
+      closeMobileMenu();
+    }
   });
 
   // Set active link
