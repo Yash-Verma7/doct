@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the specialist doctors at Anti-Gravity Health Clinic. Search by name or filter by department. 40+ experienced physicians.">
+  <title>Our Doctors — Anti-Gravity Health Clinic</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+  <div class="emergency-banner"><div class="emergency-banner__inner container"><span>🚨 24/7 Emergency Services Available</span><a href="tel:+911234567890">Call: +91 123-456-7890</a></div></div>
+  <nav class="navbar"><div class="container navbar__inner"><a href="index.html" class="navbar__logo"><img src="assets/images/logo.png" alt="Logo"><div class="navbar__logo-text">Anti-Gravity<span>Health Clinic</span></div></a><div class="navbar__links" id="nav-links"><a href="index.html" class="navbar__link">Home</a><a href="about.html" class="navbar__link">About</a><a href="services.html" class="navbar__link">Services</a><a href="doctors.html" class="navbar__link">Doctors</a><a href="testimonials.html" class="navbar__link">Testimonials</a><a href="blog.html" class="navbar__link">Blog</a><a href="contact.html" class="navbar__link">Contact</a><a href="appointment.html" class="btn btn--primary navbar__cta">Book Appointment</a></div><div class="navbar__hamburger" id="hamburger"><span></span><span></span><span></span></div></div></nav>
+
+  <section class="page-hero">
+    <h1 class="page-hero__title">Our Doctors</h1>
+    <div class="page-hero__breadcrumb"><a href="index.html">Home</a><span>/</span><span>Doctors</span></div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-header__label">Expert Care</div>
+        <h2 class="section-header__title">Meet Our Specialists</h2>
+        <p class="section-header__subtitle">Over 40 experienced doctors dedicated to your health and wellbeing.</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar reveal">
+        <div class="filter-bar__search">
+          <span class="filter-bar__search-icon">🔍</span>
+          <input type="text" id="doctor-search" placeholder="Search doctors by name..." class="form-input" style="padding-left: 44px; border-radius: var(--radius-full);">
+        </div>
+        <div class="filter-bar__select">
+          <select id="dept-filter" class="form-select" style="border-radius: var(--radius-full);">
+            <option value="all">All Departments</option>
+            <option value="cardiology">Cardiology</option>
+            <option value="neurology">Neurology</option>
+            <option value="orthopedics">Orthopedics</option>
+            <option value="pediatrics">Pediatrics</option>
+            <option value="diagnostics">Diagnostics & Lab</option>
+            <option value="general">General Medicine</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Doctors Grid -->
+      <div class="grid grid--3" id="doctors-grid">
+        <div class="doctor-card reveal" data-name="Dr. Rajesh Kapoor" data-dept="cardiology">
+          <img src="assets/images/doctor-1.png" alt="Dr. Rajesh Kapoor" class="doctor-card__image">
+          <div class="doctor-card__body">
+            <h3 class="doctor-card__name">Dr. Rajesh Kapoor</h3>
+            <div class="doctor-card__specialty">Cardiology</div>
+            <div class="doctor-card__qualifications">MBBS, MD, DM (Cardiology) — 18 years exp.</div>
+            <div class="doctor-card__availability">Mon, Wed, Fri: 10AM – 4PM</div>
+            <a href="appointment.html" class="btn btn--primary btn--sm">Book Appointment</a>
+          </div>
+        </div>
+        <div class="doctor-card reveal reveal--delay-1" data-name="Dr. Ananya Sharma" data-dept="neurology">
+          <img src="assets/images/doctor-2.png" alt="Dr. Ananya Sharma" class="doctor-card__image">
+          <div class="doctor-card__body">
+            <h3 class="doctor-card__name">Dr. Ananya Sharma</h3>
+            <div class="doctor-card__specialty">Neurology</div>
+            <div class="doctor-card__qualifications">MBBS, MD, DM (Neurology) — 12 years exp.</div>
+            <div class="doctor-card__availability">Tue, Thu, Sat: 9AM – 3PM</div>
+            <a href="appointment.html" class="btn btn--primary btn--sm">Book Appointment</a>
+          </div>
+        </div>
+        <div class="doctor-card reveal reveal--delay-2" data-name="Dr. Vikram Patel" data-dept="orthopedics">
+          <img src="assets/images/doctor-3.png" alt="Dr. Vikram Patel" class="doctor-card__image">
+          <div class="doctor-card__body">
+            <h3 class="doctor-card__name">Dr. Vikram Patel</h3>
+            <div class="doctor-card__specialty">Orthopedics</div>
+            <div class="doctor-card__qualifications">MBBS, MS (Ortho), FRCS — 22 years exp.</div>
+            <div class="doctor-card__availability">Mon – Sat: 10AM – 5PM</div>
+            <a href="appointment.html" class="btn btn--primary btn--sm">Book Appointment</a>
+          </div>
+        </div>
+        <div class="doctor-card reveal" data-name="Dr. Priya Menon" data-dept="pediatrics">
+          <img src="assets/images/doctor-4.png" alt="Dr. Priya Menon" class="doctor-card__image">
+          <div class="doctor-card__body">
+            <h3 class="doctor-card__name">Dr. Priya Menon</h3>
+            <div class="doctor-card__specialty">Pediatrics</div>
+            <div class="doctor-card__qualifications">MBBS, MD (Pediatrics), DCH — 15 years exp.</div>
+            <div class="doctor-card__availability">Mon – Fri: 9AM – 2PM</div>
+            <a href="appointment.html" class="btn btn--primary btn--sm">Book Appointment</a>
+          </div>
+        </div>
+        <div class="doctor-card reveal reveal--delay-1" data-name="Dr. Arjun Reddy" data-dept="cardiology">
+          <img src="assets/images/doctor-5.png" alt="Dr. Arjun Reddy" class="doctor-card__image">
+          <div class="doctor-card__body">
+            <h3 class="doctor-card__name">Dr. Arjun Reddy</h3>
+            <div class="doctor-card__specialty">Cardiology</div>
+            <div class="doctor-card__qualifications">MBBS, MD, DM (Interventional Cardiology) — 8 years exp.</div>
+            <div class="doctor-card__availability">Mon, Wed, Fri: 2PM – 7PM</div>
+            <a href="appointment.html" class="btn btn--primary btn--sm">Book Appointment</a>
+          </div>
+        </div>
+        <div class="doctor-card reveal reveal--delay-2" data-name="Dr. Kavita Singh" data-dept="general">
+          <img src="assets/images/doctor-6.png" alt="Dr. Kavita Singh" class="doctor-card__image">
+          <div class="doctor-card__body">
+            <h3 class="doctor-card__name">Dr. Kavita Singh</h3>
+            <div class="doctor-card__specialty">General Medicine</div>
+            <div class="doctor-card__qualifications">MBBS, MD (Medicine) — 10 years exp.</div>
+            <div class="doctor-card__availability">Mon – Sat: 9AM – 6PM</div>
+            <a href="appointment.html" class="btn btn--primary btn--sm">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="no-results" id="no-results">
+        <div class="no-results__icon">🔍</div>
+        <h3>No doctors found</h3>
+        <p>Try adjusting your search or filter criteria.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section"><div class="container"><h2 class="reveal">Can't Find Your Doctor?</h2><p class="reveal">Call us and we'll help you find the right specialist for your needs.</p><a href="contact.html" class="btn btn--white btn--lg reveal">Contact Us →</a></div></section>
+
+  <footer class="footer"><div class="container"><div class="footer__grid"><div><a href="index.html" class="navbar__logo" style="margin-bottom:var(--space-sm);display:inline-flex"><img src="assets/images/logo.png" alt="Logo" style="height:45px"><div class="navbar__logo-text">Anti-Gravity<span>Health Clinic</span></div></a><p class="footer__brand-text">Healthcare That Elevates Your Wellbeing.</p></div><div><h4 class="footer__heading">Quick Links</h4><a href="about.html" class="footer__link">About Us</a><a href="services.html" class="footer__link">Our Services</a><a href="doctors.html" class="footer__link">Our Doctors</a><a href="appointment.html" class="footer__link">Book Appointment</a><a href="contact.html" class="footer__link">Contact Us</a></div><div><h4 class="footer__heading">Working Hours</h4><div class="footer__hours-item"><span>Mon – Sat</span><span>9AM – 8PM</span></div><div class="footer__hours-item"><span>Sunday</span><span style="color:var(--danger)">Emergency Only</span></div></div><div><h4 class="footer__heading">Emergency</h4><a href="tel:+911234567890" style="color:var(--danger);font-size:var(--text-lg);font-weight:700">📞 +91 123-456-7890</a></div></div><div class="footer__bottom"><span>© 2024 Anti-Gravity Health Clinic. All Rights Reserved.</span></div></div></footer>
+  <a href="https://wa.me/911234567890" target="_blank" class="whatsapp-fab">💬</a>
+  <script src="js/main.js"></script>
+  <script src="js/doctors.js"></script>
+</body>
+</html>

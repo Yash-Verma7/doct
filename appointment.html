@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book an appointment at Anti-Gravity Health Clinic. Select your doctor, department, and preferred time. Quick and easy online booking.">
+  <title>Book Appointment — Anti-Gravity Health Clinic</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+  <div class="emergency-banner"><div class="emergency-banner__inner container"><span>🚨 24/7 Emergency Services Available</span><a href="tel:+911234567890">Call: +91 123-456-7890</a></div></div>
+  <nav class="navbar"><div class="container navbar__inner"><a href="index.html" class="navbar__logo"><img src="assets/images/logo.png" alt="Logo"><div class="navbar__logo-text">Anti-Gravity<span>Health Clinic</span></div></a><div class="navbar__links" id="nav-links"><a href="index.html" class="navbar__link">Home</a><a href="about.html" class="navbar__link">About</a><a href="services.html" class="navbar__link">Services</a><a href="doctors.html" class="navbar__link">Doctors</a><a href="testimonials.html" class="navbar__link">Testimonials</a><a href="blog.html" class="navbar__link">Blog</a><a href="contact.html" class="navbar__link">Contact</a><a href="appointment.html" class="btn btn--primary navbar__cta">Book Appointment</a></div><div class="navbar__hamburger" id="hamburger"><span></span><span></span><span></span></div></div></nav>
+
+  <section class="page-hero">
+    <h1 class="page-hero__title">Book an Appointment</h1>
+    <div class="page-hero__breadcrumb"><a href="index.html">Home</a><span>/</span><span>Appointment</span></div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="appointment-grid">
+        <!-- Form -->
+        <div class="appointment-form reveal" id="appointment-form">
+          <h3 style="margin-bottom: var(--space-sm);">Schedule Your Visit</h3>
+          <p style="color: var(--gray-500); font-size: var(--text-sm); margin-bottom: var(--space-xl);">Fill in the details below and we'll confirm your appointment shortly.</p>
+          <form id="booking-form">
+            <div class="appointment-form__row">
+              <div class="form-group">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-input" id="patient-name" placeholder="Enter your full name" required>
+                <div class="form-error" id="name-error">Please enter your name</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" class="form-input" id="patient-phone" placeholder="+91 XXXXX XXXXX" required>
+                <div class="form-error" id="phone-error">Please enter a valid phone number</div>
+              </div>
+            </div>
+            <div class="appointment-form__row">
+              <div class="form-group">
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-input" id="patient-email" placeholder="your@email.com" required>
+                <div class="form-error" id="email-error">Please enter a valid email</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Department *</label>
+                <select class="form-select" id="apt-department" required>
+                  <option value="">Select Department</option>
+                  <option value="cardiology">Cardiology</option>
+                  <option value="neurology">Neurology</option>
+                  <option value="orthopedics">Orthopedics</option>
+                  <option value="pediatrics">Pediatrics</option>
+                  <option value="diagnostics">Diagnostics & Lab</option>
+                  <option value="general">General Medicine</option>
+                </select>
+                <div class="form-error" id="dept-error">Please select a department</div>
+              </div>
+            </div>
+            <div class="appointment-form__row">
+              <div class="form-group">
+                <label class="form-label">Preferred Doctor</label>
+                <select class="form-select" id="apt-doctor">
+                  <option value="">Select Doctor (optional)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Insurance Provider</label>
+                <select class="form-select" id="apt-insurance">
+                  <option value="">Select Insurance (optional)</option>
+                  <option value="star">Star Health</option>
+                  <option value="hdfc">HDFC ERGO</option>
+                  <option value="icici">ICICI Lombard</option>
+                  <option value="max">Max Bupa</option>
+                  <option value="bajaj">Bajaj Allianz</option>
+                  <option value="other">Other</option>
+                  <option value="none">No Insurance</option>
+                </select>
+              </div>
+            </div>
+            <div class="appointment-form__row">
+              <div class="form-group">
+                <label class="form-label">Preferred Date *</label>
+                <input type="date" class="form-input" id="apt-date" required>
+                <div class="form-error" id="date-error">Please select a valid date</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Preferred Time *</label>
+                <select class="form-select" id="apt-time" required>
+                  <option value="">Select Time Slot</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="09:30">9:30 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="10:30">10:30 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="11:30">11:30 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="14:30">2:30 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="15:30">3:30 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="16:30">4:30 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                  <option value="17:30">5:30 PM</option>
+                  <option value="18:00">6:00 PM</option>
+                  <option value="18:30">6:30 PM</option>
+                  <option value="19:00">7:00 PM</option>
+                </select>
+                <div class="form-error" id="time-error">Please select a time slot</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Reason for Visit</label>
+              <textarea class="form-textarea" id="apt-reason" placeholder="Briefly describe your symptoms or reason for visit..." rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Confirm Appointment →</button>
+          </form>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="appointment-sidebar reveal reveal--delay-2">
+          <div class="sidebar-card">
+            <div class="sidebar-card__title">🕐 Working Hours</div>
+            <div class="sidebar-card__item"><span>Monday – Saturday</span><span>9:00 AM – 8:00 PM</span></div>
+            <div class="sidebar-card__item"><span>Sunday</span><span style="color: var(--danger);">Emergency Only</span></div>
+          </div>
+          <div class="sidebar-card">
+            <div class="sidebar-card__title">📞 Need Help?</div>
+            <div class="sidebar-card__item">Call: +91 123-456-7890</div>
+            <div class="sidebar-card__item">Email: appointments@antigravityhealth.com</div>
+            <div class="sidebar-card__item">WhatsApp: +91 123-456-7890</div>
+          </div>
+          <div class="sidebar-card">
+            <div class="sidebar-card__title">📋 Before Your Visit</div>
+            <div class="sidebar-card__item">✓ Bring previous medical reports</div>
+            <div class="sidebar-card__item">✓ List of current medications</div>
+            <div class="sidebar-card__item">✓ Insurance card (if applicable)</div>
+            <div class="sidebar-card__item">✓ Arrive 15 minutes early</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="success-modal">
+    <div class="modal">
+      <div class="modal__icon">✓</div>
+      <h3 class="modal__title">Appointment Confirmed!</h3>
+      <p class="modal__text">Thank you for booking with Anti-Gravity Health Clinic. We've sent a confirmation to your email. Our team will contact you shortly.</p>
+      <button class="btn btn--primary" onclick="closeModal('success-modal')">Close</button>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer__grid"><div><a href="index.html" class="navbar__logo" style="margin-bottom:var(--space-sm);display:inline-flex"><img src="assets/images/logo.png" alt="Logo" style="height:45px"><div class="navbar__logo-text">Anti-Gravity<span>Health Clinic</span></div></a><p class="footer__brand-text">Healthcare That Elevates Your Wellbeing.</p></div><div><h4 class="footer__heading">Quick Links</h4><a href="about.html" class="footer__link">About Us</a><a href="services.html" class="footer__link">Our Services</a><a href="doctors.html" class="footer__link">Our Doctors</a><a href="contact.html" class="footer__link">Contact Us</a></div><div><h4 class="footer__heading">Working Hours</h4><div class="footer__hours-item"><span>Mon – Sat</span><span>9AM – 8PM</span></div><div class="footer__hours-item"><span>Sunday</span><span style="color:var(--danger)">Emergency Only</span></div></div><div><h4 class="footer__heading">Emergency</h4><a href="tel:+911234567890" style="color:var(--danger);font-size:var(--text-lg);font-weight:700">📞 +91 123-456-7890</a></div></div><div class="footer__bottom"><span>© 2024 Anti-Gravity Health Clinic. All Rights Reserved.</span></div></div></footer>
+  <a href="https://wa.me/911234567890" target="_blank" class="whatsapp-fab">💬</a>
+  <script src="js/main.js"></script>
+  <script src="js/appointment.js"></script>
+</body>
+</html>

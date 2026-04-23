@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Health tips, wellness articles, and medical updates from Anti-Gravity Health Clinic's expert doctors.">
+  <title>Health Blog — Anti-Gravity Health Clinic</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+  <div class="emergency-banner"><div class="emergency-banner__inner container"><span>🚨 24/7 Emergency Services Available</span><a href="tel:+911234567890">Call: +91 123-456-7890</a></div></div>
+  <nav class="navbar"><div class="container navbar__inner"><a href="index.html" class="navbar__logo"><img src="assets/images/logo.png" alt="Logo"><div class="navbar__logo-text">Anti-Gravity<span>Health Clinic</span></div></a><div class="navbar__links" id="nav-links"><a href="index.html" class="navbar__link">Home</a><a href="about.html" class="navbar__link">About</a><a href="services.html" class="navbar__link">Services</a><a href="doctors.html" class="navbar__link">Doctors</a><a href="testimonials.html" class="navbar__link">Testimonials</a><a href="blog.html" class="navbar__link">Blog</a><a href="contact.html" class="navbar__link">Contact</a><a href="appointment.html" class="btn btn--primary navbar__cta">Book Appointment</a></div><div class="navbar__hamburger" id="hamburger"><span></span><span></span><span></span></div></div></nav>
+
+  <section class="page-hero">
+    <h1 class="page-hero__title">Health Tips & Blog</h1>
+    <div class="page-hero__breadcrumb"><a href="index.html">Home</a><span>/</span><span>Blog</span></div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- Category Tabs -->
+      <div class="category-tabs reveal" id="category-tabs">
+        <button class="category-tab active" data-category="all">All</button>
+        <button class="category-tab" data-category="cardiology">Cardiology</button>
+        <button class="category-tab" data-category="nutrition">Nutrition</button>
+        <button class="category-tab" data-category="wellness">Wellness</button>
+        <button class="category-tab" data-category="pediatrics">Pediatrics</button>
+        <button class="category-tab" data-category="fitness">Fitness</button>
+      </div>
+
+      <!-- Featured Article -->
+      <div class="blog-featured reveal" data-category="cardiology">
+        <img src="assets/images/blog-heart.png" alt="Heart Health" class="blog-featured__image">
+        <div class="blog-featured__body">
+          <span class="badge badge--teal">Cardiology</span>
+          <h3 style="margin: var(--space-md) 0 var(--space-sm);">10 Heart-Healthy Habits That Can Save Your Life</h3>
+          <div class="blog-card__meta"><span>📅 April 15, 2024</span><span>⏱ 8 min read</span><span>By Dr. Rajesh Kapoor</span></div>
+          <p style="color: var(--gray-500); font-size: var(--text-sm); margin: var(--space-md) 0;">Cardiovascular disease remains the leading cause of death worldwide. But the good news is that most heart conditions are preventable. In this comprehensive guide, our chief cardiologist shares 10 evidence-based habits that can dramatically reduce your risk of heart disease and improve your overall cardiovascular health.</p>
+          <a href="#" class="blog-card__link">Read Full Article →</a>
+        </div>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="grid grid--3" id="blog-grid">
+        <div class="blog-card reveal" data-category="nutrition">
+          <img src="assets/images/blog-nutrition.png" alt="Nutrition Guide" class="blog-card__image">
+          <div class="blog-card__body">
+            <div class="blog-card__meta"><span>📅 April 10, 2024</span><span>⏱ 6 min read</span></div>
+            <span class="badge badge--teal" style="margin-bottom: var(--space-sm);">Nutrition</span>
+            <h4 class="blog-card__title">The Ultimate Guide to Balanced Nutrition in 2024</h4>
+            <p class="blog-card__excerpt">Discover the latest nutrition science and learn how to build a diet that supports your health goals, from immune function to weight management.</p>
+            <a href="#" class="blog-card__link">Read More →</a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal--delay-1" data-category="wellness">
+          <img src="assets/images/blog-mental.png" alt="Mental Wellness" class="blog-card__image">
+          <div class="blog-card__body">
+            <div class="blog-card__meta"><span>📅 April 5, 2024</span><span>⏱ 5 min read</span></div>
+            <span class="badge badge--teal" style="margin-bottom: var(--space-sm);">Wellness</span>
+            <h4 class="blog-card__title">Mental Health: Why It Matters More Than Ever</h4>
+            <p class="blog-card__excerpt">Understanding the connection between mental and physical health, and simple daily practices to improve your psychological wellbeing.</p>
+            <a href="#" class="blog-card__link">Read More →</a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal--delay-2" data-category="pediatrics">
+          <img src="assets/images/blog-heart.png" alt="Child Health" class="blog-card__image">
+          <div class="blog-card__body">
+            <div class="blog-card__meta"><span>📅 March 28, 2024</span><span>⏱ 7 min read</span></div>
+            <span class="badge badge--teal" style="margin-bottom: var(--space-sm);">Pediatrics</span>
+            <h4 class="blog-card__title">Essential Vaccinations: A Parent's Complete Guide</h4>
+            <p class="blog-card__excerpt">A comprehensive guide to childhood vaccinations — what they are, when to get them, and why they're crucial for your child's health.</p>
+            <a href="#" class="blog-card__link">Read More →</a>
+          </div>
+        </div>
+        <div class="blog-card reveal" data-category="fitness">
+          <img src="assets/images/blog-mental.png" alt="Fitness Tips" class="blog-card__image">
+          <div class="blog-card__body">
+            <div class="blog-card__meta"><span>📅 March 20, 2024</span><span>⏱ 5 min read</span></div>
+            <span class="badge badge--teal" style="margin-bottom: var(--space-sm);">Fitness</span>
+            <h4 class="blog-card__title">30-Minute Daily Exercise Routine for Busy Professionals</h4>
+            <p class="blog-card__excerpt">You don't need hours at the gym. Our physiotherapy team shares an effective 30-minute routine anyone can follow at home or office.</p>
+            <a href="#" class="blog-card__link">Read More →</a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal--delay-1" data-category="cardiology">
+          <img src="assets/images/blog-nutrition.png" alt="Blood Pressure" class="blog-card__image">
+          <div class="blog-card__body">
+            <div class="blog-card__meta"><span>📅 March 15, 2024</span><span>⏱ 6 min read</span></div>
+            <span class="badge badge--teal" style="margin-bottom: var(--space-sm);">Cardiology</span>
+            <h4 class="blog-card__title">Understanding Blood Pressure: The Silent Killer</h4>
+            <p class="blog-card__excerpt">High blood pressure affects 1 in 4 adults. Learn how to monitor, manage, and prevent hypertension with lifestyle changes and medical guidance.</p>
+            <a href="#" class="blog-card__link">Read More →</a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal--delay-2" data-category="wellness">
+          <img src="assets/images/blog-heart.png" alt="Sleep Health" class="blog-card__image">
+          <div class="blog-card__body">
+            <div class="blog-card__meta"><span>📅 March 8, 2024</span><span>⏱ 4 min read</span></div>
+            <span class="badge badge--teal" style="margin-bottom: var(--space-sm);">Wellness</span>
+            <h4 class="blog-card__title">Sleep Better Tonight: Doctor-Approved Sleep Hygiene Tips</h4>
+            <p class="blog-card__excerpt">Quality sleep is essential for health. Our doctors share evidence-based strategies to improve your sleep quality starting tonight.</p>
+            <a href="#" class="blog-card__link">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="no-results" id="no-results">
+        <div class="no-results__icon">📝</div>
+        <h3>No articles in this category yet</h3>
+        <p>Check back soon for new content!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="section section--dark">
+    <div class="container text-center">
+      <div class="section-header reveal">
+        <div class="section-header__label">Stay Informed</div>
+        <h2 class="section-header__title">Subscribe to Health Tips</h2>
+        <p class="section-header__subtitle">Get the latest health articles and clinic updates delivered to your inbox.</p>
+      </div>
+      <form class="newsletter-form reveal" style="max-width: 500px; margin: 0 auto; display: flex; gap: var(--space-sm);">
+        <input type="email" class="footer__newsletter-input" placeholder="Enter your email" required style="flex: 1;">
+        <button type="submit" class="btn btn--gold">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer__grid"><div><a href="index.html" class="navbar__logo" style="margin-bottom:var(--space-sm);display:inline-flex"><img src="assets/images/logo.png" alt="Logo" style="height:45px"><div class="navbar__logo-text">Anti-Gravity<span>Health Clinic</span></div></a><p class="footer__brand-text">Healthcare That Elevates Your Wellbeing.</p></div><div><h4 class="footer__heading">Quick Links</h4><a href="about.html" class="footer__link">About Us</a><a href="services.html" class="footer__link">Our Services</a><a href="doctors.html" class="footer__link">Our Doctors</a><a href="appointment.html" class="footer__link">Book Appointment</a><a href="contact.html" class="footer__link">Contact Us</a></div><div><h4 class="footer__heading">Working Hours</h4><div class="footer__hours-item"><span>Mon – Sat</span><span>9AM – 8PM</span></div><div class="footer__hours-item"><span>Sunday</span><span style="color:var(--danger)">Emergency Only</span></div></div><div><h4 class="footer__heading">Emergency</h4><a href="tel:+911234567890" style="color:var(--danger);font-size:var(--text-lg);font-weight:700">📞 +91 123-456-7890</a></div></div><div class="footer__bottom"><span>© 2024 Anti-Gravity Health Clinic. All Rights Reserved.</span></div></div></footer>
+  <a href="https://wa.me/911234567890" target="_blank" class="whatsapp-fab">💬</a>
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>
